@@ -90,5 +90,107 @@
 Полученная диаграмма (рисунок~\ref{fig:domain:model:db:model}) будет являться моделью базы данных инфологического
 уровня ~\cite{kulikov_db_workbook}.
 
-В информационной модели предусмотрены возможности для обеспечения безопасности аутентификации и авторизации: в
-таблице User предусмотрены поля для хранения хешированного пароля.
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[scale=0.47]{database.png} 
+	\caption{Инфологическая модель базы данных}
+	\label{fig:domain:model:db:model}
+\end{figure}
+
+Предметная область разрабатываемого проекта включает следующие сущности и атрибуты:
+
+\begin{enumerate}
+  \item пользователь:
+    \begin{enumerate}
+      \item адрес электронной почты;
+      \item хешированный пароль;
+      \item количество авторизаций;
+      \item время текущей авторизации;
+      \item время последней авторизации;
+      \item имя;
+      \item идентификатор позиции;
+    \end{enumerate}
+  \item вопрос:
+    \begin{enumerate}
+      \item название;
+      \item описание;
+      \item краткий ответ;
+    \end{enumerate}
+  \item позиция:
+    \begin{enumerate}
+      \item название;
+      \item идентификатор департамента;
+      \item наличие матрицы навыков;
+    \end{enumerate}
+  \item департамент:
+    \begin{enumerate}
+      \item название;
+      \item офис;
+    \end{enumerate}
+  \item категория:
+    \begin{enumerate}
+      \item название;
+    \end{enumerate}
+  \item навык:
+    \begin{enumerate}
+      \item название;
+      \item идентификатор категории;
+    \end{enumerate}
+  \item технология:
+    \begin{enumerate}
+      \item идентификатор технологии;
+      \item тип технологии;
+      \item идентификатор навыка;
+    \end{enumerate}
+  \item список прав:
+    \begin{enumerate}
+      \item права;
+      \item идентификатор роли;
+    \end{enumerate}
+  \item журнал:
+    \begin{enumerate}
+      \item идентификатор пользователя;
+      \item тип журнала;
+      \item идентификатор журнала;
+      \item исходное состояние;
+      \item конечное состояние;
+      \item данные;
+    \end{enumerate}
+  \item роль:
+    \begin{enumerate}
+      \item название;
+    \end{enumerate}
+  \item пользователь департамента:
+    \begin{enumerate}
+      \item идентификатор пользователя;
+      \item идентификатор департамента;
+      \item идентификатор роли;
+    \end{enumerate}
+  \item профиль:
+    \begin{enumerate}
+      \item идентификатор пользователя;
+      \item информация;
+      \item статус;
+      \item идентификатор родителя;
+      \item ссылка на фотографию;
+    \end{enumerate}
+  \item пользователь проекта:
+    \begin{enumerate}
+      \item идентификатор пользователя;
+      \item идентификатор проекта;
+      \item роль;
+      \item зона ответственности;
+    \end{enumerate}
+  \item проект:
+    \begin{enumerate}
+      \item название;
+      \item описание;
+      \item статус;
+    \end{enumerate}
+  \pagebreak
+  \item вопрос позиции:
+    \begin{enumerate}
+      \item идентификатор вопроса;
+      \item идентификатор позиции.
+    \end{enumerate}
+\end{enumerate}
