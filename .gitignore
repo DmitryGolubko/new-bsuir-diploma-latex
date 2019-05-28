@@ -32,7 +32,6 @@
 *.vrb
 *.xdy
 *.tdo
-*.pdf
 *.gz*
 *~
 *.sublime-workspace
