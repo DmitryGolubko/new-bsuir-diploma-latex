@@ -8,7 +8,7 @@
 включены факторы, представленные в таблице~\ref{table:experiment:data_preparation:data_model}:
 
 \begin{table}[!ht]
-\caption{Назначение папок, используемых в проекте}
+\caption{Характеристики недвижимости}
 \label{table:experiment:data_preparation:data_model}
 \centering
 	\begin{tabular}{{ 
@@ -17,12 +17,6 @@
 
   	\hline
   	Параметр & {\begin{center} Описание \end{center}} \\
-
-    \hline
-    City & Город\\
-
-    \hline
-    State & Штат\\
 
     \hline
     Building area & Общая площадь, кв.м\\
@@ -66,14 +60,56 @@
 \end{table}
 
 Как можно заметить, полученные данные являются как количественными, так и качественными. Количественные данные остаются
-без изменений, для качественных(город, штат, тип недвижимости) были введены числовые характеристики.
+без изменений, для качественных(тип недвижимости) были введены числовые характеристики.
 Исходные данные были взяты из базы проданной недвижимости в Австралии за период с 2017 по 2020 год.
-Всего было собрано данных о более чем 6 тысяч проданных и продающихся объектов недвижимости. Данные хранятся в виде 
+Всего было собрано данных о более чем 5 тысяч проданных объектов недвижимости. Данные хранятся в виде 
 таблицы в формате, часть которой показана на рисунке~\ref{fig:experiment:csv_example}
 
 \begin{sidewaysfigure}
   \centering
-    \includegraphics[scale=0.4]{csv.jpg}
+    \includegraphics[scale=0.5]{csv.jpg}
     \caption{Исходные данные в csv формате}
     \label{fig:experiment:csv_example}
 \end{sidewaysfigure}
+
+Проведен анализ полученных данных. На рисунке~\ref{fig:experiment:hist_building_area} приведена гистограмма площадей
+полученных объектов недвижимости, которая позволяет говорить что наиболее популярная недвижмиость имеет площадь от 100
+до 150 квадратных метров.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[scale=1]{hist_building_area.png} 
+  \caption{Гистограмма площадей}
+  \label{fig:experiment:hist_building_area}
+\end{figure}
+
+На рисунке~\ref{fig:experiment:barplot_bathrooms} приведена гистограмма душевых комнат
+полученных объектов недвижимости, на которой видно что подавляющее большинство домов имеют 1 или 2 душевые комнаты.
+\pagebreak
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[scale=0.6]{barplot_bathrooms.png} 
+  \caption{Гистограмма душевых комнат}
+  \label{fig:experiment:barplot_bathrooms}
+\end{figure}
+
+На рисунке~\ref{fig:experiment:barplot_bedrooms} приведена гистограмма спален
+полученных объектов недвижимости, на которой видно что большинство домов от двух до четырех спален.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[scale=0.6]{barplot_bedrooms.png} 
+  \caption{Гистограмма спален}
+  \label{fig:experiment:barplot_bedrooms}
+\end{figure}
+
+На рисунке~\ref{fig:experiment:hist_sold_price} можно увидеть, что большинство квартир продаются в диапазоне
+цен от 250 до 750 тысяч долларов.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[scale=1]{hist_sold_price.png} 
+  \caption{Гистограмма стоимости продажи}
+  \label{fig:experiment:hist_sold_price}
+\end{figure}
