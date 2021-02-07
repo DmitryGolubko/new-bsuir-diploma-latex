@@ -370,7 +370,8 @@
 
 % Зачем: Оформление листингов кода
 % Примечание: final нужен для переопределения режима draft, в котором листинги не выводятся в документ.
-\usepackage[final]{listings}
+% \usepackage[final]{listings}
+\usepackage[final]{listingsutf8}
 
 
 % Зачем: настройка оформления листинга для языка F#
@@ -463,6 +464,7 @@
 \lstdefinestyle{rb}{
    xleftmargin=0ex,
    language=Ruby,
+   extendedchars=false,
    basicstyle=\footnotesize\ttfamily,
    breaklines=true,
    columns=fullflexible
